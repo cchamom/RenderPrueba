@@ -1,6 +1,7 @@
+
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS base
 WORKDIR /app
-EXPOSE 10000
+EXPOSE 8080
 
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
@@ -10,8 +11,7 @@ COPY ["ApiEjemplorENDER/ApiEjemplorENDER.csproj", "ApiEjemplorENDER/"]
 RUN dotnet restore "ApiEjemplorENDER/ApiEjemplorENDER.csproj"
 
 COPY . .
-
-WORKDIR /src/ApiEjemplorENDER
+WORKDIR "/src/ApiEjemplorENDER"
 RUN dotnet build "ApiEjemplorENDER.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
@@ -20,9 +20,8 @@ RUN dotnet publish "ApiEjemplorENDER.csproj" -c $BUILD_CONFIGURATION -o /app/pub
 
 FROM base AS final
 WORKDIR /app
-
 COPY --from=publish /app/publish .
 
-ENV ASPNETCORE_URLS=http://+:10000
+ENV ASPNETCORE_URLS=http://+:8080
 
 ENTRYPOINT ["dotnet", "ApiEjemplorENDER.dll"]

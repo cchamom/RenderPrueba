@@ -30,3 +30,4 @@ C:\Users\Christian Chamo\Desktop\PracticaAnalisisRender\ApiEjemplorENDER\obj\Deb
 C:\Users\Christian Chamo\Desktop\PracticaAnalisisRender\ApiEjemplorENDER\obj\Debug\net9.0\ApiEjemplorENDER.pdb
 C:\Users\Christian Chamo\Desktop\PracticaAnalisisRender\ApiEjemplorENDER\obj\Debug\net9.0\ApiEjemplorENDER.genruntimeconfig.cache
 C:\Users\Christian Chamo\Desktop\PracticaAnalisisRender\ApiEjemplorENDER\obj\Debug\net9.0\ref\ApiEjemplorENDER.dll
+C:\Users\Christian Chamo\Desktop\PracticaAnalisisRender\ApiEjemplorENDER\obj\Debug\net9.0\ApiEjemplorENDER.sourcelink.json
