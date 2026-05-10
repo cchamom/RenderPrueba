@@ -14,11 +14,11 @@ var summaries = new[]
 };
 
 
-app.MapGet("/", () => "API de Christian Chamo - Estado: ONLINE");
+app.MapGet("/", () => "API de Cristian Chamo, Keily Lopez y Delmi Fajardo - Estado: ONLINE");
 
 app.MapGet("/status", () => new {
     Estado = "Servidor Activo",
-    Estudiante = "Cristian Chamo",
+    Estudiantes = "Cristian Chamo, Keily Lopez y Delmi Fajardo",
     Universidad = "Mariano Gálvez",
     Proyecto = "Hidden Valley API",
     FechaHora = DateTime.Now.ToString("G"),
